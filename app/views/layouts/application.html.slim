@@ -1,9 +1,32 @@
 doctype html
 html
   head
-    title Comiketter
     = csrf_meta_tags
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload"
     = javascript_include_tag "application", "data-turbolinks-track": "reload"
+
   body
+    / メニューバー
+    nav.light-green
+      .nav-wrapper.container
+        a.brand-logo href="#" #{ENV["APP_NAME"]}
+        ul id="nav-mobile" class="right hide-on-med-and-down"
+          li
+            a href="#" A
+          li
+            a href="#" B
+          li
+            a href="#" C
+
+    / 本体
     = yield
+
+    / フッター
+    footer.page-footer.green.darken-1
+      .container
+        .row
+          | いらないかもしれないフッター
+      .footer-copyright
+        .container
+          a.light-blue-text.text-lighten-5.right href="//twitter.com/nekonenene" target="_blank"
+            | 作った人： ハトネコエ (@nekonenene)

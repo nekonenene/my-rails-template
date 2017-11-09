@@ -1,3 +1,5 @@
+APP_NAME = Comiketter
+
 DATABASE_HOST=localhost
 DATABASE_PORT=3306
 DATABASE_USERNAME=hatonekoe

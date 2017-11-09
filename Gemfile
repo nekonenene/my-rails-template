@@ -57,6 +57,8 @@ group :development do
 
   ## Adding
   gem "foreman"
+  gem "jquery-rails"
+  gem "materialize-sass" # jquery-rails に依存
   gem "pry-rails"
   gem "yard"
 end
