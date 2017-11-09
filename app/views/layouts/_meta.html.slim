@@ -1,0 +1,46 @@
+meta charset="UTF-8"
+meta name="viewport" content="width=device-width, initial-scale=1"
+/[if IE]
+  meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"
+  meta http-equiv="X-UA-Compatible" content="requiresActiveX=true"
+
+- site_name = ENV["APP_NAME"]
+- description = "Twitterの知り合いのスペースを一覧で"
+- theme_color = "#7ee1f2"
+- icon_png_url = "/images/favicon.png"
+- ogp_title = site_name + " | " + description
+- ogp_image_url = root_url + "images/ogp.png" # 絶対パスじゃないとダメ
+- twitter_account = "@nekonenene"
+
+title = site_name
+meta name="description" content="#{description}"
+meta name="format-detection" content="telephone=no"
+link rel="index" href="#{root_url}"
+
+meta name="theme-color" content="#{theme_color}"
+meta name="msapplication-TileColor" content="#{theme_color}"
+
+/ Facebook などでの共有の際、埋め込まれる
+meta property="og:locale" content="ja_JP"
+meta property="og:type" content="website"
+meta property="og:url" content="#{root_url}"
+meta property="og:site_name" content="#{site_name}"
+meta property="og:title" content="#{ogp_title}"
+meta property="og:description" content="#{description}"
+meta property="og:image" content="#{ogp_image_url}"
+meta property="og:image:width" content="1200"
+meta property="og:image:height" content="630"
+
+/ Twitterカードで用いられる
+meta name="twitter:card" content="summary_large_image"
+meta name="twitter:site" content="#{twitter_account}"
+meta name="twitter:title" content="#{ogp_title}"
+meta name="twitter:description" content="#{description}"
+meta name="twitter:image" content="#{ogp_image_url}"
+
+/ IE10以下に対応する場合は、favicon.ico をルートディレクトリに置くこと
+link rel="apple-touch-icon" href="#{icon_png_url}"
+link rel="apple-touch-icon-precomposed" href="#{icon_png_url}"
+link rel="icon" sizes="16x16 32x32 128x128 256x256" href="#{icon_png_url}"
+link rel="shortcut icon" href="#{icon_png_url}"
+meta name="msapplication-TileImage" content="#{icon_png_url}"
